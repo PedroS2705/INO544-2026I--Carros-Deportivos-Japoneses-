@@ -68,4 +68,4 @@ Para replicar el preprocesamiento y el entrenamiento del modelo:
 
 1. Clonar el repositorio:
    ```bash
-   git clone [https://github.com/](https://github.com/)[usuario]/[repositorio].git
+   git clone [[https://github.com/](https://github.com/PedroS2705/INO544-2026I--Carros-Deportivos-Japoneses-.git)](https://github.com/PedroS2705/INO544-2026I--Carros-Deportivos-Japoneses-.git)
