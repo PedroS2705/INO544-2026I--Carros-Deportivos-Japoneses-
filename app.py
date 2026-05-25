@@ -5,6 +5,9 @@ from pydantic import BaseModel
 import uvicorn
 import os
 import base64
+import sys
+# Asegurar que el directorio actual (paquete) esté en sys.path
+sys.path.insert(0, os.path.dirname(__file__))
 from datetime import datetime
 from utils import JDMClassifier
 from database.connection import get_connection, JDMDatabase
@@ -17,7 +20,7 @@ from pathlib import Path
 # 2. SEGUNDO: Crear la variable 'app' e inicializar el clasificador
 app = FastAPI()  # <-- ESTA LÍNEA DEBE ESTAR ANTES DE CUALQUIER @app
 
-MODEL_PATH = "tu_modelo.pth"  # Pon la ruta real de tu modelo entrenado
+MODEL_PATH = "modelo_jdm_v2.pt"  # Pon la ruta real de tu modelo entrenado
 classifier = JDMClassifier(MODEL_PATH)
 
 # 3. TERCERO: Definir los modelos de datos de Pydantic
@@ -152,4 +155,5 @@ async def predict_frame(payload: FramePayload):
 # Punto de entrada
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    # Pasar la instancia `app` directamente evita reimportar el módulo
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False)
