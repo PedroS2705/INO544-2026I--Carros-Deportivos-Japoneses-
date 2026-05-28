@@ -24,16 +24,54 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     padding: 4rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.left-panel {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.actions-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* MODIFICADO: Estabilización del contenedor derecho para fijarlo en pantalla */
+.results-section {
+    width: 420px;
+    position: -webkit-sticky; /* Soporte para navegadores basados en Safari */
+    position: sticky;
+    top: 2rem; /* Separación prudencial del techo de la ventana gráfica */
+    max-height: calc(100vh - 4rem); /* Evita desborde vertical */
+    overflow-y: auto; /* Permite scroll interno propio solo si colapsa la pantalla */
+}
+
+/* MODIFICADO: Asegura el acoplamiento correcto del layout sticky */
+.results-section .result-card {
+    min-height: auto;
 }
 
 /* Header */
@@ -237,11 +275,7 @@ button {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Results Section */
-.results-section {
-    animation: fadeIn 0.5s ease-out;
-}
-
+/* Results Card Layout */
 .result-card {
     display: flex;
     flex-direction: column;
@@ -472,6 +506,25 @@ textarea:focus {
     width: 100%;
 }
 
+@media (max-width: 980px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    .dashboard-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MODIFICADO: Rompe la fijación en pantallas pequeñas/móviles para que fluya hacia abajo naturalmente */
+    .results-section {
+        width: 100%;
+        flex: 1 1 auto;
+        position: static;
+        max-height: none;
+    }
+}
+
 @media (max-width: 600px) {
     .header-content {
         flex-direction: column;
@@ -493,7 +546,6 @@ textarea:focus {
    CAMERA SECTION
    ========================================================= */
 
-/* Header actions wrapper */
 .header-actions {
     display: flex;
     align-items: center;
@@ -524,7 +576,6 @@ textarea:focus {
     font-size: 0.82rem;
 }
 
-/* Camera Section */
 .camera-section {
     animation: fadeIn 0.4s ease-out;
 }
@@ -536,7 +587,6 @@ textarea:focus {
     padding: 1.75rem;
 }
 
-/* Camera top bar */
 .camera-header {
     display: flex;
     justify-content: space-between;
@@ -578,7 +628,6 @@ textarea:focus {
     gap: 0.75rem;
 }
 
-/* Countdown timer badge */
 .refresh-timer {
     display: flex;
     align-items: center;
@@ -604,7 +653,6 @@ textarea:focus {
     color: #ff6450;
 }
 
-/* Camera viewport */
 .camera-viewport {
     position: relative;
     width: 100%;
@@ -624,14 +672,12 @@ textarea:focus {
     display: block;
 }
 
-/* Scanning overlay */
 .scan-overlay {
     position: absolute;
     inset: 0;
     pointer-events: none;
 }
 
-/* Corner brackets */
 .scan-frame {
     position: absolute;
     inset: 15%;
@@ -650,7 +696,6 @@ textarea:focus {
 .corner.bl { bottom: 0; left: 0;  border-width: 0 0 2px 2px; border-radius: 0 0 0 4px; }
 .corner.br { bottom: 0; right: 0; border-width: 0 2px 2px 0; border-radius: 0 0 4px 0; }
 
-/* Animated scan line */
 .scan-line {
     position: absolute;
     left: 15%;
@@ -668,7 +713,6 @@ textarea:focus {
     100% { top: 85%; opacity: 0; }
 }
 
-/* Status overlay text */
 .camera-status {
     position: absolute;
     bottom: 12px;
@@ -685,7 +729,6 @@ textarea:focus {
     transition: opacity 0.5s;
 }
 
-/* Camera result panel */
 .camera-result {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--panel-border);
@@ -731,7 +774,6 @@ textarea:focus {
     transition: all 0.4s ease;
 }
 
-/* Circular confidence chart */
 .camera-confidence-circle {
     position: relative;
     width: 64px;
@@ -768,7 +810,6 @@ textarea:focus {
     font-weight: 600;
 }
 
-/* Analyzing progress bar */
 .camera-analyzing-bar {
     display: flex;
     align-items: center;

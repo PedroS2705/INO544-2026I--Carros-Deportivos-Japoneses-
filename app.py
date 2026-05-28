@@ -85,6 +85,7 @@ async def predict(file: UploadFile = File(...)):
     try:
         contents = await file.read()
         result = classifier.predict_image(contents)
+        print(f"[DEBUG] /predict endpoint returning result: {result}")
         specs = result.get("specs", {})
         
         # Uso de la clase db centralizada
@@ -147,6 +148,7 @@ async def predict_frame(payload: FramePayload):
             img_data = img_data.split(",", 1)[1]
         contents = base64.b64decode(img_data)
         result = classifier.predict_image(contents)
+        print(f"[DEBUG] /predict_frame endpoint returning result: {result}")
         return {"success": True, "result": result}
     except Exception as e:
         return {"success": False, "error": str(e)}

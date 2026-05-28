@@ -45,7 +45,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(modelo.fc.parameters(), lr=0.001)
 
 # 4. BUCLE DE ENTRENAMIENTO
-epocas = 10 # Cuántas veces repasará todas las fotos
+epocas = 20 # Cuántas veces repasará todas las fotos
 
 print("Iniciando entrenamiento...")
 for epoca in range(epocas):

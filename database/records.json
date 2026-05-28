@@ -30,5 +30,293 @@
     "anio": 0,
     "prob": 0.9341209530830383,
     "timestamp": "20260525T041407168272"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T040146660240.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T040146660240"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T042058905481.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T042058905481"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T042539669209.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T042539669209"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043030138993.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T043030138993"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043040176760.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan Silvia",
+    "anio": 0,
+    "prob": 0.4725431501865387,
+    "timestamp": "20260528T043040176760"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043209458724.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan Silvia",
+    "anio": 0,
+    "prob": 0.4725431501865387,
+    "timestamp": "20260528T043209458724"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043516667502.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T043516667502"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043526323503.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T043526323503"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043711499221.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T043711499221"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043723414038.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T043723414038"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043942904372.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan GTR R35",
+    "anio": 0,
+    "prob": 0.3503815829753876,
+    "timestamp": "20260528T043942904372"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043944960591.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan GTR R35",
+    "anio": 0,
+    "prob": 0.3503815829753876,
+    "timestamp": "20260528T043944960591"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043946595076.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan GTR R35",
+    "anio": 0,
+    "prob": 0.3503815829753876,
+    "timestamp": "20260528T043946595076"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T043954042350.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.37154248356819153,
+    "timestamp": "20260528T043954042350"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044004454353.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.3435516953468323,
+    "timestamp": "20260528T044004454353"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044012525873.jpg",
+    "marca": "Desconocido",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.6661801338195801,
+    "timestamp": "20260528T044012525873"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044144435403.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044144435403"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044150368127.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044150368127"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044328608320.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044328608320"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044341318503.jpg",
+    "marca": "Desconocido",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044341318503"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044543971063.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044543971063"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T044725913257.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T044725913257"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045024118709.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T045024118709"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045202368116.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T045202368116"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045235703115.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9341209530830383,
+    "timestamp": "20260528T045235703115"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045636011973.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.7102922797203064,
+    "timestamp": "20260528T045636011973"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045644954777.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Silvia",
+    "anio": 0,
+    "prob": 0.31846359372138977,
+    "timestamp": "20260528T045644954777"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045654161420.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.34546855092048645,
+    "timestamp": "20260528T045654161420"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045703560467.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.3331540524959564,
+    "timestamp": "20260528T045703560467"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045713656613.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.5985752940177917,
+    "timestamp": "20260528T045713656613"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T045722505053.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.3696403205394745,
+    "timestamp": "20260528T045722505053"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T050546588125.jpg",
+    "marca": "Mazda",
+    "modelo": "Mazda Miata",
+    "anio": 0,
+    "prob": 0.9522343873977661,
+    "timestamp": "20260528T050546588125"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T050553545508.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Silvia",
+    "anio": 0,
+    "prob": 0.2700386941432953,
+    "timestamp": "20260528T050553545508"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T050612209777.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.7642624974250793,
+    "timestamp": "20260528T050612209777"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T053542246434.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Silvia",
+    "anio": 0,
+    "prob": 0.2700386941432953,
+    "timestamp": "20260528T053542246434"
+  },
+  {
+    "path": "C:\\Users\\EQUIPO\\Downloads\\Proyecto arreglo\\Proyecto arreglo\\Proyecto\\jdm_classifier\\database\\images\\img_20260528T053550192156.jpg",
+    "marca": "Nissan",
+    "modelo": "Nissan Skyline R34",
+    "anio": 0,
+    "prob": 0.8698800206184387,
+    "timestamp": "20260528T053550192156"
   }
 ]

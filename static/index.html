@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDM AI Vision | Clasificador Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="shortcut icon" href="../static/JDM.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght=300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/JDM.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -34,151 +34,148 @@
             </div>
         </header>
 
-        <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-            <button id="btn-camara-en-vivo" class="btn-outline" style="display: flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                Cámara en Vivo
-            </button>
-        </div>
-
-        <section class="upload-section">
-            
-            <div id="contenedor-streaming" style="display: none; flex-direction: column; align-items: center; gap: 15px; width: 100%; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-                <video id="video" width="100%" autoplay style="max-width: 500px; border-radius: 8px; background-color: #000; transform: scaleX(-1);"></video>
-                
-                <button id="capturar-btn" class="btn-primary" style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
-                    📷 Clasificar en Vivo
-                </button>
-                
-                <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
-                <div id="resultado-ia" style="margin-top: 10px; text-align: center; color: #00ffcc;"></div>
-            </div>
-
-            <div id="drop-zone" class="drop-zone">
-                <div id="contenido-dropzone" class="drop-content">
-                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
-                    </svg>
-                    <p>Arrastra tu imagen aquí o <span class="browse-text">Explorar</span></p>
-                    <span class="file-info">Soporta JPG, PNG, WEBP</span>
-                </div>
-                <input type="file" id="file-input" accept="image/*" hidden>
-            </div>
-
-            <div id="preview-container" class="preview-container hidden">
-                <img id="image-preview" src="" alt="Preview">
-                <div class="btn-group">
-                    <button id="reset-btn" class="btn-secondary">Nueva Imagen</button>
-                    <button id="analyze-btn" class="btn-primary">
-                        <span class="btn-text">Analizar Vehículo</span>
-                        <div class="loader hidden"></div>
+        <div class="dashboard-layout">
+            <div class="left-panel">
+                <div class="actions-row">
+                    <button id="btn-camara-en-vivo" class="btn-outline" style="display: flex; align-items: center; gap: 8px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        Cámara en Vivo
                     </button>
                 </div>
-            </div>
-        </section>
 
-        <!-- Sección Cámara en Vivo -->
-        <section id="camera-section" class="camera-section hidden">
-            <div class="camera-panel glass-panel">
-                <div class="camera-header">
-                    <div class="camera-title-group">
-                        <div class="live-dot" id="live-dot"></div>
-                        <h2 class="camera-title">Cámara en Vivo</h2>
+                <section id="camera-section" class="camera-section hidden" style="margin-bottom: 20px;">
+                    <div class="camera-panel glass-panel">
+                        <div class="camera-header">
+                            <div class="camera-title-group">
+                                <div class="live-dot" id="live-dot"></div>
+                                <h2 class="camera-title">Cámara en Vivo</h2>
+                            </div>
+                            <div class="camera-controls">
+                                <div id="refresh-timer" class="refresh-timer" title="Próximo análisis en...">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    <span id="timer-countdown">2s</span>
+                                </div>
+                                <button id="camera-stop-btn" class="btn-secondary btn-sm">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    </svg>
+                                    Detener
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="camera-viewport">
+                            <video id="camera-video" autoplay playsinline muted></video>
+                            <canvas id="camera-canvas" hidden></canvas>
+                            <div class="scan-overlay" id="scan-overlay">
+                                <div class="scan-frame">
+                                    <span class="corner tl"></span>
+                                    <span class="corner tr"></span>
+                                    <span class="corner bl"></span>
+                                    <span class="corner br"></span>
+                                </div>
+                                <div class="scan-line" id="scan-line"></div>
+                            </div>
+                            <div class="camera-status" id="camera-status">Iniciando cámara...</div>
+                        </div>
+
+                        <div class="camera-result" id="camera-result-panel">
+                            <div class="camera-result-inner">
+                                <div class="camera-result-left">
+                                    <span class="camera-label">Vehículo detectado</span>
+                                    <span id="camera-brand" class="camera-brand-name">—</span>
+                                    <span id="camera-model" class="camera-model-name">—</span>
+                                </div>
+                                <div class="camera-confidence-circle">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                        <path id="camera-circle-fill" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    </svg>
+                                    <span id="camera-confidence-text" class="circle-label">0%</span>
+                                </div>
+                            </div>
+                            <div id="camera-analyzing" class="camera-analyzing-bar">
+                                <div class="analyzing-progress"></div>
+                                <span>Analizando imagen...</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="camera-controls">
-                        <div id="refresh-timer" class="refresh-timer" title="Próximo análisis en...">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
+                </section>
+
+                <section class="upload-section">
+                    <div id="contenedor-streaming" style="display: none; flex-direction: column; align-items: center; gap: 15px; width: 100%; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
+                        <video id="video" width="100%" autoplay style="max-width: 500px; border-radius: 8px; background-color: #000; transform: scaleX(-1);"></video>
+                        <button id="capturar-btn" class="btn-primary hidden" style="padding: 10px 20px; font-weight: bold; cursor: pointer;">📷 Clasificar en Vivo</button>
+                        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+                        <div id="resultado-ia" style="margin-top: 10px; text-align: center; color: #00ffcc;"></div>
+                    </div>
+
+                    <div id="drop-zone" class="drop-zone">
+                        <div id="contenido-dropzone" class="drop-content">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
                             </svg>
-                            <span id="timer-countdown">2s</span>
+                            <p>Arrastra tu imagen aquí o <span class="browse-text">Explorar</span></p>
+                            <span class="file-info">Soporta JPG, PNG, WEBP</span>
                         </div>
-                        <button id="camera-stop-btn" class="btn-secondary btn-sm">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            </svg>
-                            Detener
-                        </button>
+                        <input type="file" id="file-input" accept="image/*" hidden>
                     </div>
-                </div>
 
-                <div class="camera-viewport">
-                    <video id="camera-video" autoplay playsinline muted></video>
-                    <canvas id="camera-canvas" hidden></canvas>
-                    <div class="scan-overlay" id="scan-overlay">
-                        <div class="scan-frame">
-                            <span class="corner tl"></span>
-                            <span class="corner tr"></span>
-                            <span class="corner bl"></span>
-                            <span class="corner br"></span>
-                        </div>
-                        <div class="scan-line" id="scan-line"></div>
-                    </div>
-                    <div class="camera-status" id="camera-status">Iniciando cámara...</div>
-                </div>
-
-                <div class="camera-result" id="camera-result-panel">
-                    <div class="camera-result-inner">
-                        <div class="camera-result-left">
-                            <span class="camera-label">Vehículo detectado</span>
-                            <span id="camera-brand" class="camera-brand-name">—</span>
-                            <span id="camera-model" class="camera-model-name">—</span>
-                        </div>
-                        <div class="camera-confidence-circle">
-                            <svg viewBox="0 0 36 36" class="circular-chart">
-                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                                <path id="camera-circle-fill" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            </svg>
-                            <span id="camera-confidence-text" class="circle-label">0%</span>
+                    <div id="preview-container" class="preview-container hidden">
+                        <img id="image-preview" src="" alt="Preview">
+                        <div class="btn-group">
+                            <button id="reset-btn" class="btn-secondary">Nueva Imagen</button>
+                            <button id="analyze-btn" class="btn-primary">
+                                <span class="btn-text">Analizar Vehículo</span>
+                                <div class="loader hidden"></div>
+                            </button>
                         </div>
                     </div>
-                    <div id="camera-analyzing" class="camera-analyzing-bar">
-                        <div class="analyzing-progress"></div>
-                        <span>Analizando imagen...</span>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
 
-        <section id="results-section" class="results-section hidden">
-            <div class="result-card glass-panel">
-                <h2 class="result-title">Análisis Completado</h2>
-                <div class="main-prediction">
-                    <span id="predicted-class" class="class-name">-</span>
-                    <span id="confidence-score" class="confidence">-</span>
-                </div>
+            <section id="results-section" class="results-section">
+                <div class="result-card glass-panel">
+                    <h2 class="result-title">Análisis Completado</h2>
+                    <div class="main-prediction">
+                        <span id="predicted-class" class="class-name"></span>
+                        <span id="confidence-score" class="confidence"></span>
+                    </div>
 
-                <div id="car-specs-container" class="specs-grid hidden">
-                    <div class="spec-item">
-                        <span class="spec-label">Marca</span>
-                        <span id="spec-brand" class="spec-value">-</span>
+                    <div id="car-specs-container" class="specs-grid hidden">
+                        <div class="spec-item">
+                            <span class="spec-label">Marca</span>
+                            <span id="spec-brand" class="spec-value">-</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Año</span>
+                            <span id="spec-year" class="spec-value">-</span>
+                        </div>
+                        <div class="spec-item full-width">
+                            <span class="spec-label">Motor</span>
+                            <span id="spec-engine" class="spec-value">-</span>
+                        </div>
+                        <div class="spec-item full-width">
+                            <span class="spec-label">Detalles</span>
+                            <p id="spec-details" class="spec-value details-text">-</p>
+                        </div>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Año</span>
-                        <span id="spec-year" class="spec-value">-</span>
-                    </div>
-                    <div class="spec-item full-width">
-                        <span class="spec-label">Motor</span>
-                        <span id="spec-engine" class="spec-value">-</span>
-                    </div>
-                    <div class="spec-item full-width">
-                        <span class="spec-label">Detalles</span>
-                        <p id="spec-details" class="spec-value details-text">-</p>
-                    </div>
-                </div>
 
-                <div class="probabilities-container">
-                    <h3>Probabilidades del Modelo</h3>
-                    <div id="prob-bars" class="prob-bars"></div>
+                    <div class="probabilities-container">
+                        <h3>Probabilidades del Modelo</h3>
+                        <div id="prob-bars" class="prob-bars"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <!-- Modal para añadir a Base de Datos -->
     <div id="add-db-modal" class="modal hidden">
         <div class="modal-backdrop"></div>
         <div class="modal-content glass-panel">
@@ -202,13 +199,12 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Motor</label>
-                    <input type="text" id="db-engine" placeholder="Ej. 2.6L RB26DETT Twin-Turbo" required>
-                </div>
-                <div class="form-group">
+                    <div class="form-group">
+                        <label>Motor</label>
+                        <input type="text" id="db-engine" placeholder="Ej. 2.6L RB26DETT Twin-Turbo" required>
+                    </div>
                     <label>Especificaciones y Detalles</label>
-                    <textarea id="db-details" rows="3" placeholder="Añade detalles sobre tracción, historial, etc."
-                        required></textarea>
+                    <textarea id="db-details" rows="3" placeholder="Añade detalles sobre tracción, historial, etc." required></textarea>
                 </div>
                 <button type="submit" id="submit-db-btn" class="btn-primary w-full">
                     <span class="btn-text">Guardar en Base de Datos</span>
@@ -218,10 +214,8 @@
         </div>
     </div>
 
-    
-
-    <script src="../static/script.js"></script>
-    <script src="../static/camara.js"></script>
+    <script src="/static/script.js"></script>
+    <script src="/static/camara.js"></script>
 </body>
 
 </html>
